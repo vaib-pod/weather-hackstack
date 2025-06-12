@@ -1,0 +1,198 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #5893FF 0%, #98bafb 100%);
+            color: rgb(0, 0, 0);
+            min-height: 100vh;
+            padding: 20px;
+            transition: color 0.5s;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dark {
+            
+            background: linear-gradient(135deg, #000000 0%, #585d65 100%);
+            color: white;
+            transition: img ;
+            transition: color 0.5s;
+        }
+        .dark .weatherIcon{
+            transition: opacity 1s ease-in;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .search {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-input {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            width: 300px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.2);
+            
+            outline: none;
+        }
+
+        .dark .search-input{
+            color: white;
+        }
+
+        .search-input::placeholder {
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .dark .search-input::placeholder {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .dark .search-btn {
+            color: white;
+           
+        }
+            
+        
+        .search-btn:hover {
+            background-color: #c0d8f5;
+        }
+        .dark .search-btn:hover {
+            background-color: #858a90;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        .current-weather {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .location {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .date {
+            
+            margin-bottom: 30px;
+        }
+
+        .weather-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .temp {
+            font-size: 72px;
+            font-weight: 300;
+            margin-right: 20px;
+        }
+
+        .weatherIcon {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .weather-description {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .weather-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .detail-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            
+        }
+
+        .forecast {
+            width: 350px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .forecast {
+                width: 100%;
+            }
+
+            .search-input {
+                width: 200px;
+            }
+        }

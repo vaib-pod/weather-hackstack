@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Website</title>
+    <link rel="stylesheet" href="weather.css">
+    
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">Weather App</div>
+            <div class="search">
+                <input type="text" class="search-input" placeholder="Search for a city" spellcheck="false">
+                <button class="search-btn">Search</button>
+                <button class="search-btn" id="geo-btn">My Location</button>
+                <button class="search-btn" onclick="toggleTheme()">Dark/Light </button>
+            </div>
+        </nav>
+
+        <div class = "main">
+            <div class="main-content">
+                <section class="current-weather">
+                    <h1 class="location">Delhi , IN</h1>
+                    <p class="date"><strong id="current-date"></strong></p>
+                    
+                    <div class="weather-info">
+                        <div class="temp">42°</div>
+                        <img src="clouds.png" alt="Partly Cloudy" class="weatherIcon">
+                        <div>
+                            <div class="weather-description">Sunny</div>
+                            <div class="feels">Feels like 45°</div>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <p>Humidity</p>
+                            <p class="humidity">65%</p>
+                        </div>
+                        <div class="detail-item">
+                            <p>Wind</p>
+                            <p class="wind">12</p>
+                        </div>
+                        <div class="detail-item">
+                            <p>Pressure</p>
+                            <p class="pressure">1012 hPa</p>
+                        </div>
+                        <div class="detail-item">
+                            <p>Visibility</p>
+                            <p class="visibility">10 km</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+      
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>
